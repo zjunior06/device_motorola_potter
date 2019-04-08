@@ -20,6 +20,9 @@ $(call inherit-product, device/moto/potter/full_potter.mk)
 # Inherit some common DU stuff.
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
 
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # TWRP theme
 TW_THEME := portrait_hdpi
 
