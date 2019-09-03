@@ -76,6 +76,7 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+
 LOCAL_MODULE := android.hidl.base@1.0
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES :=
@@ -88,3 +89,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES :=
 LOCAL_SHARED_LIBRARIES := libhidltransport
 include $(BUILD_SHARED_LIBRARY)
+
+LOCAL_MODULE       := ueventd.qcom.rc
+LOCAL_MODULE_STEM  := ueventd.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/ueventd.qcom.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)
+include $(BUILD_PREBUILT)
