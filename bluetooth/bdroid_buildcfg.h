@@ -17,7 +17,15 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <cutils/properties.h>
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+int32_t property_get_int32(const char *key, int32_t default_value);
+#ifdef __cplusplus
+}
+#endif
 #include <string.h>
 
 #define BTM_DEF_LOCAL_NAME "Moto G5 Plus"
