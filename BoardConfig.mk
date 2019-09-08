@@ -259,7 +259,9 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/adspd|libshim_adsp.so \
     /system/vendor/lib64/libmdmcutback.so|libqsap_shim.so \
-    /system/lib/libjustshoot.so|libjustshoot_shim.so
+    /system/lib/libjustshoot.so|libjustshoot_shim.so \
+    /system/lib/libui.so|libui_shim.so \
+    /system/lib64/libui.so|libui_shim.so
 
 # VNDK
 PRODUCT_USE_VNDK_OVERRIDE := false
