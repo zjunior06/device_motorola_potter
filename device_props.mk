@@ -57,6 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.dun=true \
     ro.qualcomm.bluetooth.map=true \
     persist.bt.enableAptXHD=true \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
