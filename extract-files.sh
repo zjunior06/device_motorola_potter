@@ -49,6 +49,15 @@ else
   fi
 fi
 
+function blob_fixup() {
+    case "${1}" in
+    vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so)
+        patchelf --replace-needed "libbase.so" "libbase-v28.so" "${2}"
+        ;;
+    esac
+}
+
+
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
