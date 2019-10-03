@@ -349,7 +349,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.dirtyunicorns.settings.device.KeyHandler</item>
+        <item>org.lineageos.settings.device.KeyHandler</item>
     </string-array>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->

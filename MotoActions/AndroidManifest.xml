@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dirtyunicorns.settings.device"
+    package="org.lineageos.settings.device"
     android:sharedUserId="android.uid.system"
     >
+
+    <original-package android:name="com.cyanogenmod.settings.device" />
 
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -19,12 +21,12 @@
     <application
         android:allowBackup="true"
         android:label="@string/moto_actions_title"
-        android:icon="@drawable/ic_gesture"
+        android:icon="@mipmap/ic_launcher"
         android:persistent="true">
 
         <provider
-            android:name=".MotoActionsSearchIndexablesProvider"
-            android:authorities="com.dirtyunicorns.settings.device"
+            android:name=".LineageActionsSearchIndexablesProvider"
+            android:authorities="org.lineageos.settings.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
@@ -34,7 +36,7 @@
             </intent-filter>
         </provider>
 
-        <receiver android:name="com.dirtyunicorns.settings.device.BootCompletedReceiver">
+        <receiver android:name="org.lineageos.settings.device.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.PRE_BOOT_COMPLETED" />
@@ -51,35 +53,48 @@
         <activity
             android:name=".DozeSettingsActivity"
             android:label="@string/ambient_display_title"
-            android:theme="@style/MotoActions">
+            android:theme="@style/LineageActions">
             <intent-filter>
-                <action android:name="com.dirtyunicorns.settings.device.DOZE_SETTINGS" />
+                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".TouchscreenGestureSettings"
+            android:name=".ActionsPreferenceActivity"
             android:label="@string/moto_actions_title"
-            android:theme="@style/MotoActions">
+            android:summary="@string/device_gestures_summary"
+            android:theme="@style/LineageActions">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings_gestures_dashboard" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/device_gestures_summary" />
         </activity>
 
         <activity
             android:name=".GestureSettingsActivity"
             android:label="@string/device_gestures_title"
-            android:theme="@style/MotoActions">
+            android:theme="@style/LineageActions">
         </activity>
 
         <activity
             android:name=".FPGestureSettingsActivity"
             android:label="@string/fingerprint_gestures_title"
-            android:theme="@style/MotoActions">
+            android:theme="@style/LineageActions">
         </activity>
 
         <activity
             android:name=".ScreenOffGestureSettingsActivity"
             android:label="@string/screen_off_gestures_title"
-            android:theme="@style/MotoActions">
+            android:theme="@style/LineageActions">
         </activity>
 
     </application>
