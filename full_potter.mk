@@ -24,4 +24,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/moto/potter/device.mk)
 
 # for specific
-$(call inherit-product, vendor/motorola/potter/potter-vendor.mk)
+$(call inherit-product, vendor/moto/potter/potter-vendor.mk)

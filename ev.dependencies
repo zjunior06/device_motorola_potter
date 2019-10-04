@@ -16,7 +16,7 @@
  },
  {
     "repository": "DirtyUnicorns/android_vendor_motorola",
-    "target_path": "vendor/motorola",
+    "target_path": "vendor/moto",
     "branch" : "p9x-caf"
  },
  {

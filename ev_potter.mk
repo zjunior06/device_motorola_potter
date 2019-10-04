@@ -18,7 +18,7 @@
 $(call inherit-product, device/moto/potter/full_potter.mk)
 
 # Inherit some common DU stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+$(call inherit-product, vendor/ev/config/common_full_phone.mk)
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
@@ -28,10 +28,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # TWRP theme
 TW_THEME := portrait_hdpi
+BOOT_ANIMATION_SIZE := 1440p
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
-PRODUCT_NAME := du_potter
+PRODUCT_NAME := ev_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_MODEL := Moto G5 Plus
@@ -44,3 +45,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="potter-7.0/NPNS25.137-33-11/11:user/release-keys"
 
 BUILD_FINGERPRINT := motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys
+
+# Set up the product codename, build version & MOTD.
+PRODUCT_CODENAME := Motus
+PRODUCT_VERSION_DEVICE_SPECIFIC := p1
+
+PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank you for choosing Evervolv for your Motorola G5 Plus\nPlease visit us at \#evervolv on irc.freenode.net\nFollow @preludedrew for the latest Evervolv updates\nGet the latest rom at evervolv.com\n------------------------------------------------\n"
+

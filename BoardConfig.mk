@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include vendor/motorola/potter/BoardConfigVendor.mk
+-include vendor/moto/potter/BoardConfigVendor.mk
 
 DEVICE_PATH := device/moto/potter
 
@@ -61,7 +61,7 @@ TARGET_OTA_ASSERT_DEVICE := potter,potter_retail
 # Enable dexpreopt to speed boot time
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 WITH_DEXPREOPT := true
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+#PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # GPS
 TARGET_NO_RPC := true
@@ -187,7 +187,7 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/compatibility_matrix.xml
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-PRODUCT_BOOT_JARS += telephony-ext
+#PRODUCT_BOOT_JARS += telephony-ext
 
 # NFC
 NXP_CHIP_TYPE := PN551
