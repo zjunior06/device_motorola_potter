@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -197,13 +197,13 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# GPS
+# GPS / Location
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti \
     libgnss \
     libgnsspps \
-    android.hardware.gnss@1.1-impl-qti \
-    android.hardware.gnss@1.1-service-qti \
-    libqsap_sdk \
+    libcurl \
     libqsap_shim
 
 PRODUCT_COPY_FILES += \
@@ -416,19 +416,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
+    libqsap_sdk \
     libcld80211 \
     libwpa_client \
+    libQWiFiSoftApCfg \
+    tcpdump \
     wcnss_service \
     wificond \
     wifilogd \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    libcurl \
-    libQWiFiSoftApCfg \
-    wificond \
-    wifilogd \
-    tcpdump \
-    libwpa_client
+    wpa_supplicant.conf
 
 # Wifi Symlinks
 PRODUCT_PACKAGES += \
