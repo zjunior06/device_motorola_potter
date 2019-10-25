@@ -198,11 +198,13 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 260014080      #   253920 * 1024 mmcblk0p52
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432    #    16484 * 1024 mmcblk0p38
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3510353920    #  3428080 * 1024 mmcblk0p53
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 26401026048 # 25782252 * 1024 mmcblk0p54
-BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
-    /mnt/vendor/persist:/persist
+    /mnt/vendor/persist:/persist \
+    /vendor/firmware_mnt:/firmware \
+    /vendor/dsp:/dsp
+
+BOARD_ROOT_EXTRA_FOLDERS := dsp firmware fsg persist
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
@@ -222,9 +224,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
-
-# Root
-BOARD_ROOT_EXTRA_FOLDERS := firmware persist fsg
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
