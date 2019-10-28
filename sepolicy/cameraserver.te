@@ -40,8 +40,8 @@ allow cameraserver debug_prop:property_service set;
 
 #######
 allow cameraserver shell_exec:file { read open execute };
-allow cameraserver self:socket create;
-allow cameraserver camera_prop:property_service set;
+#allow cameraserver self:socket create;
+#allow cameraserver camera_prop:property_service set;
 allow cameraserver init:unix_stream_socket connectto;
 allow cameraserver property_socket:sock_file write;
 allow cameraserver shell_exec:file { execute getattr };

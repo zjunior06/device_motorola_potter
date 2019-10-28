@@ -59,7 +59,7 @@
 /persist/captouch_(.*)?                                  u:object_r:persist_antcap_file:s0
 /persist/telephony(/.*)?                                 u:object_r:pds_telephony_file:s0
 /persist/public/telephony(/.*)?                          u:object_r:pds_telephony_file:s0
-/persist/public/omadm(/.*)?                              u:object_r:pds_omadm_file:s0
+#/persist/public/omadm(/.*)?                              u:object_r:pds_omadm_file:s0
 /persist/factory/audio(/.*)?                             u:object_r:persist_audio_file:s0
 /persist/\.bt_nv\.bin                                    u:object_r:bluetooth_data_file:s0
 
@@ -119,7 +119,7 @@
 
 # Sensors
 /dev/laser                                               u:object_r:laser_device:s0
-/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
+#/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
 /dev/motosh                                              u:object_r:sensors_device:s0
 /dev/motosh_as                                           u:object_r:sensors_device:s0
 /dev/motosh_ms                                           u:object_r:sensors_device:s0
@@ -133,11 +133,11 @@
 # WCNSS
 /sys/module/wcnsscore/parameters(/.*)?                   u:object_r:sysfs_wcnsscore:s0
 
-/data/misc/perfd(/.*)?                                          u:object_r:perfd_data_file:s0
-/data/system/perfd(/.*)?                                        u:object_r:perfd_data_file:s0
+#/data/misc/perfd(/.*)?                                          u:object_r:perfd_data_file:s0
+#/data/system/perfd(/.*)?                                        u:object_r:perfd_data_file:s0
 /data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
 
-/system/vendor/bin/perfd           u:object_r:perfd_exec:s0
+#/system/vendor/bin/perfd           u:object_r:perfd_exec:s0
 /system/vendor/bin/hw/android\.hardware\.power@1\.0-service-qti          u:object_r:hal_power_default_exec:s0
 /system/vendor/radio(/.*)? u:object_r:radio_data_file:s0
 
