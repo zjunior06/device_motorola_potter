@@ -15,7 +15,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 LOCAL_PATH := $(call my-dir)
 
 # ADSP
@@ -41,11 +40,4 @@ LOCAL_SHARED_LIBRARIES := libutils
 LOCAL_MODULE := libjustshoot_shim
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := GraphicBuffer.cpp
-LOCAL_SHARED_LIBRARIES := libui
-LOCAL_MODULE := libui_shim
-LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
