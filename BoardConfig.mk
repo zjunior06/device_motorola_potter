@@ -1,4 +1,3 @@
-f
 #
 # Copyright (C) 2016 The CyanogenMod Project
 #               2017 The LineageOS Project
