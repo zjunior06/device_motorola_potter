@@ -57,7 +57,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.dun=true \
     ro.qualcomm.bluetooth.map=true \
     persist.bt.enableAptXHD=true \
-    persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -98,10 +97,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=192m \
+    dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapmaxfree=8m \
     dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapsize=384m \
+    dalvik.vm.heapsize=512m \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75 \
     ro.sys.fw.dex2oat_thread_count=4 \
