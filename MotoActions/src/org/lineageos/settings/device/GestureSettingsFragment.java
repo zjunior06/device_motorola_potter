@@ -17,7 +17,7 @@
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
-import androidx.preference.PreferenceFragment;
+import android.support.v14.preference.PreferenceFragment;
 
 public class GestureSettingsFragment extends PreferenceFragment {
 

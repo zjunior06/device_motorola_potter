@@ -18,10 +18,10 @@ package org.lineageos.settings.device;
 
 import android.app.ActionBar;
 import android.os.Bundle;
-import androidx.preference.PreferenceFragment;
+import android.support.v14.preference.PreferenceFragment;
 import android.provider.Settings;
-import androidx.preference.Preference;
-import androidx.preference.SwitchPreference;
+import android.support.v7.preference.Preference;
+import android.support.v14.preference.SwitchPreference;
 import android.view.MenuItem;
 import android.view.LayoutInflater;
 import android.view.View;
