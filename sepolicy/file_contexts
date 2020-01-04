@@ -6,7 +6,7 @@
 /fsg                                                     u:object_r:fsg_file:s0
 
 # Audio
-# /system/etc/audio_policy_configuration.xml             u:object_r:vendor_configs_file:s0
+# /system/etc/audio_policy_configuration.xml               u:object_r:vendor_configs_file:s0
 
 # ADSP
 /data/adspd(/.*)?                                        u:object_r:adspd_data_file:s0
@@ -106,6 +106,7 @@
 /dev/block/bootdevice/by-name/utagsBackup                u:object_r:utags_block_device:s0
 /dev/block/bootdevice/by-name/utags                      u:object_r:utags_block_device:s0
 /firmware(/.*)?                                          u:object_r:firmware_file:s0
+/bt_firmware(/.*)?                                       u:object_r:bt_firmware_file:s0
 /persist(/.*)?                                           u:object_r:persist_block_device:s0
 /fsg(/.*)?                                               u:object_r:fsg_file:s0
 /dsp(/.*)?                                               u:object_r:adsprpcd_file:s0
@@ -133,10 +134,11 @@
 #/data/system/perfd(/.*)?                                        u:object_r:perfd_data_file:s0
 /data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
 
-/(vendor|system/vendor)/bin/perfd                                             u:object_r:perfd_exec:s0
+/(vendor|system/vendor)/bin/perfd           u:object_r:perfd_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service          u:object_r:hal_power_default_exec:s0
+# /system/vendor/radio(/.*)? u:object_r:radio_data_file:s0
 
-/(vendor|system/vendor)/bin/qmi_motext_hook                                   u:object_r:rild_exec:s0
+/(vendor|system/vendor)/bin/qmi_motext_hook u:object_r:rild_exec:s0
 
 /sys/kernel/debug/rmt_storage(/.*)?                                           u:object_r:debugfs_rmt_storage:s0
 
@@ -153,10 +155,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine            u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey            u:object_r:hal_drm_clearkey_exec:s0
 
-#Partitions
-/bt_firmware(/.*)?                                       u:object_r:bt_firmware_file:s0
-/firmware(/.*)?                                          u:object_r:firmware_file:s0
-/fsg(/.*)?                                               u:object_r:fsg_file:s0
 
 # Usb hal
 /(vendor|system/vendor)/bin/hw/android\.hardware\.usb@1\.0-service\.potter       u:object_r:hal_usb_default_exec:s0
