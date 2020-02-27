@@ -322,6 +322,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-google.xml:system/etc/permissions/privapp-permissions-google.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     wlan_carrier_bin.sh \
