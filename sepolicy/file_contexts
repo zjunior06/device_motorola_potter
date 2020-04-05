@@ -1,10 +1,3 @@
-/dev/block/platform/soc/7824900.sdhci/mmcblk0p19         u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc/7824900.sdhci/mmcblk0p27         u:object_r:modem_efs_partition_device:s0
-/dev/block/platform/soc/7824900.sdhci/mmcblk0p28         u:object_r:modem_efs_partition_device:s0
-
-# FSG
-/fsg                                                     u:object_r:fsg_file:s0
-
 # Audio
 # /system/etc/audio_policy_configuration.xml               u:object_r:vendor_configs_file:s0
 
@@ -53,7 +46,7 @@
 /persist/captouch_(.*)?                                  u:object_r:persist_antcap_file:s0
 /persist/telephony(/.*)?                                 u:object_r:pds_telephony_file:s0
 /persist/public/telephony(/.*)?                          u:object_r:pds_telephony_file:s0
-#/persist/public/omadm(/.*)?                              u:object_r:pds_omadm_file:s0
+/persist/public/omadm(/.*)?                              u:object_r:pds_omadm_file:s0
 /persist/factory/audio(/.*)?                             u:object_r:persist_audio_file:s0
 /persist/\.bt_nv\.bin                                    u:object_r:bluetooth_data_file:s0
 
@@ -107,16 +100,14 @@
 /dev/block/bootdevice/by-name/utags                      u:object_r:utags_block_device:s0
 /firmware(/.*)?                                          u:object_r:firmware_file:s0
 /bt_firmware(/.*)?                                       u:object_r:bt_firmware_file:s0
-/persist(/.*)?                                           u:object_r:persist_block_device:s0
 /fsg(/.*)?                                               u:object_r:fsg_file:s0
-/dsp(/.*)?                                               u:object_r:adsprpcd_file:s0
 
 # RIL
 /data/misc/netmgr(/.*)?                                  u:object_r:netmgr_data_file:s0
 
 # Sensors
 /dev/laser                                               u:object_r:laser_device:s0
-#/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
+/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
 /dev/motosh                                              u:object_r:sensors_device:s0
 /dev/motosh_as                                           u:object_r:sensors_device:s0
 /dev/motosh_ms                                           u:object_r:sensors_device:s0
@@ -130,13 +121,12 @@
 # WCNSS
 /sys/module/wcnsscore/parameters(/.*)?                   u:object_r:sysfs_wcnsscore:s0
 
-#/data/misc/perfd(/.*)?                                          u:object_r:perfd_data_file:s0
-#/data/system/perfd(/.*)?                                        u:object_r:perfd_data_file:s0
+/data/misc/perfd(/.*)?                                          u:object_r:perfd_data_file:s0
+/data/system/perfd(/.*)?                                        u:object_r:perfd_data_file:s0
 /data/oemnvitems(/.*)?                                          u:object_r:nv_data_file:s0
 
 /(vendor|system/vendor)/bin/perfd           u:object_r:perfd_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service          u:object_r:hal_power_default_exec:s0
-# /system/vendor/radio(/.*)? u:object_r:radio_data_file:s0
 
 /(vendor|system/vendor)/bin/qmi_motext_hook u:object_r:rild_exec:s0
 
