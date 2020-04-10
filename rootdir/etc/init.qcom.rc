@@ -146,8 +146,6 @@ on boot
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
 
-    start vendor.rmt_storage
-
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
     chmod 2770 /dev/socket/qmux_radio
@@ -567,13 +565,6 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
 
-service vendor.rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    ioprio rt 0
-    shutdown critical
-    writepid /dev/cpuset/system-background/tasks
-
 service hciattach system/vendor/bin/hci_qcomm_init -e
     class late_start
     user bluetooth
@@ -605,11 +596,6 @@ service hci_filter_root /system/bin/wcnss_filter
     user bluetooth
     group bluetooth diag oem_2950
     disabled
-
-service vendor.tftp_server /vendor/bin/tftp_server
-   class core
-   user root
-   writepid /dev/cpuset/system-background/tasks
 
 service vendor.per_mgr /vendor/bin/pm-service
     class core
