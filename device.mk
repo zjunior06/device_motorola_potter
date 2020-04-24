@@ -433,6 +433,7 @@ PRODUCT_PACKAGES += \
     wcnss_service \
     wificond \
     wifilogd \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
