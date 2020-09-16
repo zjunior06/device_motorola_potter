@@ -35,19 +35,17 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-using android::init::property_set;
-
 constexpr const char* BUILD_FINGERPRINT = "motorola/payton/payton:8.0.0/OPWS27.57-25-6-10/12:user/release-keys";
 
-void property_override(char const prop[], char const value[])
+void property_override(char const prop[], char const value[], bool add = true)
 {
-    prop_info *pi;
+    auto pi = (prop_info *) __system_property_find(prop);
 
-    pi = (prop_info*) __system_property_find(prop);
-    if (pi)
+    if (pi != nullptr) {
         __system_property_update(pi, value, strlen(value));
-    else
+    } else if (add) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
+    }
 }
 
 void property_override_dual(char const system_prop[], char const vendor_prop[],
@@ -63,11 +61,11 @@ void check_device()
     struct sysinfo sys;
     sysinfo(&sys);
     if (sys.totalram > 3072ull * 1024 * 1024) {
-        property_set("ro.boot.ram", "4GB");
+        property_override("ro.boot.ram", "4GB");
     } else if (sys.totalram > 2048ull * 1024 * 1024) {
-        property_set("ro.boot.ram", "3GB");
+        property_override("ro.boot.ram", "3GB");
     } else {
-        property_set("ro.boot.ram", "2GB");
+        property_override("ro.boot.ram", "2GB");
     }
 }
 
@@ -75,12 +73,12 @@ void num_sims() {
     std::string dualsim;
 
     dualsim = android::base::GetProperty("ro.boot.dualsim", "");
-    property_set("ro.hw.dualsim", dualsim.c_str());
+    property_override("ro.hw.dualsim", dualsim.c_str());
 
     if (dualsim == "true") {
-        property_set("persist.radio.multisim.config", "dsds");
+        property_override("persist.radio.multisim.config", "dsds");
     } else {
-        property_set("persist.radio.multisim.config", "");
+        property_override("persist.radio.multisim.config", "");
     }
 }
 
@@ -88,32 +86,34 @@ void vendor_load_properties()
 {
 
     // sku
-    std::string sku = android::base::GetProperty("ro.boot.hardware.sku", "");
-    property_override_dual("ro.product.model", "ro.vendor.product.model", sku.c_str());
+    std::string sku = "Moto G5 Plus (";
+    sku.append(android::base::GetProperty("ro.boot.hardware.sku", ""));
+    sku.append(")");
+    property_override("ro.product.model", sku.c_str());
 
     // rmt_storage
     std::string device = android::base::GetProperty("ro.boot.device", "");
     std::string radio = android::base::GetProperty("ro.boot.radio", "");
-    property_set("ro.vendor.hw.device", device.c_str());
-    property_set("ro.vendor.hw.radio", radio.c_str());
-    property_set("ro.hw.fps", "true");
-    property_set("ro.hw.imager", "12MP");
-    property_set("ro.build.fingerprint", BUILD_FINGERPRINT);
-    property_set("ro.vendor.build.fingerprint", BUILD_FINGERPRINT);
+    property_override("ro.vendor.hw.device", device.c_str());
+    property_override("ro.vendor.hw.radio", radio.c_str());
+    property_override("ro.hw.fps", "true");
+    property_override("ro.hw.imager", "12MP");
+    property_override("ro.build.fingerprint", BUILD_FINGERPRINT);
+    property_override("ro.vendor.build.fingerprint", BUILD_FINGERPRINT);
 
     num_sims();
 
     if (sku == "XT1687") {
-        property_set("ro.hw.ecompass", "true");
-        property_set("ro.hw.nfc", "false");
+        property_override("ro.hw.ecompass", "true");
+        property_override("ro.hw.nfc", "false");
     }
     else {
-        property_set("ro.hw.ecompass", "false");
-        property_set("ro.hw.nfc", "true");
+        property_override("ro.hw.ecompass", "false");
+        property_override("ro.hw.nfc", "true");
     }
 
     if (sku == "XT1683") {
-        property_set("ro.hw.dtv", "true");
+        property_override("ro.hw.dtv", "true");
     }
 
     check_device();
