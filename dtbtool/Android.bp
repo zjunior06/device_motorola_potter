@@ -1,0 +1,5 @@
+cc_binary_host {
+    srcs: ["dtbtool.c"],
+
+    name : "dtbTool_potter"
+}
