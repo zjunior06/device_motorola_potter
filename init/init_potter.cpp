@@ -100,6 +100,7 @@ void vendor_load_properties()
     property_override("ro.hw.imager", "12MP");
     property_override("ro.build.fingerprint", BUILD_FINGERPRINT);
     property_override("ro.vendor.build.fingerprint", BUILD_FINGERPRINT);
+    property_override("ro.system.build.fingerprint", BUILD_FINGERPRINT);
 
     num_sims();
 
