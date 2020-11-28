@@ -255,6 +255,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MotoActions
 
+# Dex
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
+
 # Media (OMX)
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
