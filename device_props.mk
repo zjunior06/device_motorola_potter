@@ -116,10 +116,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heaptargetutilization=0.75 \
-    ro.sys.fw.dex2oat_thread_count=4 \
     dalvik.vm.boot-dex2oat-threads=8 \
     dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.image-dex2oat-threads=4
+
+# Dex2Oat
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true \
+    ro.sys.fw.dex2oat_thread_count=8
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
