@@ -23,9 +23,6 @@ $(call inherit-product, vendor/ev/config/common_full_phone.mk)
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # TWRP theme
 TW_THEME := portrait_hdpi
 BOOT_ANIMATION_SIZE := 1440p
