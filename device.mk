@@ -255,9 +255,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MotoActions
 
-# Dex
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
-
 # Media (OMX)
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -406,11 +403,6 @@ PRODUCT_PACKAGES += \
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
-
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase-v28.so
