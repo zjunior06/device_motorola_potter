@@ -1,7 +1,10 @@
 [
  {
     "repository": "android_kernel_moto_msm8953",
-    "target_path": "kernel/moto/msm8953",
-    "branch" : "q-10.0"
+    "target_path": "kernel/moto/msm8953"
+ },
+ {
+    "repository": "android_hardware_motorola",
+    "target_path": "hardware/motorola"
  }
 ]
