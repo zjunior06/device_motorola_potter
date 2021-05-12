@@ -1,18 +1,15 @@
 [
   {
-    "repository":  "DotOS-Devices/android_kernel_motorola_potter",
-    "target_path": "kernel/motorola/potter",
-    "branch": "dot11"
+    "repository":  "android_kernel_motorola_potter",
+    "target_path": "kernel/motorola/potter"
   },
   {
-    "repository": "DotOS-Devices/proprietary_vendor_motorola_potter",
-    "target_path": "vendor/motorola/potter",
-    "branch": "dot11"
+    "repository": "proprietary_vendor_motorola_potter",
+    "target_path": "vendor/motorola/potter"
   },
   {
-    "repository": "dotOS-Devices/android_packages_resources_devicesettings-custom",
-    "target_path": "packages/resources/devicesettings-custom",
-    "branch": "dot11"
+    "repository": "android_packages_resources_devicesettings-custom",
+    "target_path": "packages/resources/devicesettings-custom"
   },
   {
     "repository": "LineageOS/android_system_qcom",
