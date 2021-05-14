@@ -10,11 +10,5 @@
   {
     "repository": "android_packages_resources_devicesettings-custom",
     "target_path": "packages/resources/devicesettings-custom"
-  },
-  {
-    "repository": "LineageOS/android_system_qcom",
-    "target_path": "system/qcom",
-    "branch": "lineage-18.1",
-    "remote": "github"
   }
 ]
