@@ -368,3 +368,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.dha_th_rate=2.3 \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8
+
+# Venom
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.surface_flinger.running_without_sync_framework=true
+
+# DHA Tunning
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.dha_tunnable=1
+
+# Smoothens UI
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.service.lgospd.enable=0 \
+persist.service.pcsync.enable=0
