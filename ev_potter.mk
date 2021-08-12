@@ -27,8 +27,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 TW_THEME := portrait_hdpi
 BOOT_ANIMATION_SIZE := 1440p
 
-WITH_GMS := true
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
 PRODUCT_NAME := ev_potter
