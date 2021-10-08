@@ -18,15 +18,10 @@
 $(call inherit-product, device/motorola/potter/full_potter.mk)
 
 # Inherit some common DU stuff.
-$(call inherit-product, vendor/dot/config/common.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
 #PE Props
-TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_GOOGLE_RECORDER := false
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-TARGET_FACE_UNLOCK_SUPPORTED := true
 # TWRP theme
 TW_THEME := portrait_hdpi
 
@@ -34,7 +29,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
-PRODUCT_NAME := dot_potter
+PRODUCT_NAME := aosp_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := potter
