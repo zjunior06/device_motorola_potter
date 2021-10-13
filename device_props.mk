@@ -243,7 +243,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.net.doxlat=true \
     persist.radio.ROTATION_ENABLE=1 \
     persist.radio.adb_log_on=0 \
-    persist.radio.calls.on.ims=true \
     persist.radio.sar_sensor=1 \
     persist.vendor.radio.sib16_support=1 \
     persist.radio.sib16_support=1 \

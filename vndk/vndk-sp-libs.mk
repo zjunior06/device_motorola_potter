@@ -12,7 +12,6 @@ VNDK_SP_LIBRARIES := \
     libRSCpuRef \
     libRSDriver \
     libRS_internal \
-    libdexfile_support \
     libbacktrace \
     libbase \
     libbcinfo \
@@ -29,8 +28,6 @@ VNDK_SP_LIBRARIES := \
     libjsoncpp \
     liblzma \
     libprocessgroup \
-    libunwind \
-    libunwindstack \
     libutils \
     libutilscallstack \
     libz
