@@ -48,6 +48,9 @@ on init
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
+    # E: Failed to open /dev/qseecom device
+    chmod 0666 /dev/qseecom
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -956,3 +959,4 @@ on post-fs-data
 on property:sys.boot_completed=1
     # Stop the logger service
     stop logger
+
