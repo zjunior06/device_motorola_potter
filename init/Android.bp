@@ -20,6 +20,7 @@ cc_library_static {
     srcs: ["init_potter.cpp"],
     whole_static_libs: ["libbase"],
     include_dirs: [
+        "system/libbase/include",
         "system/core/init"
     ],
     shared_libs: [
