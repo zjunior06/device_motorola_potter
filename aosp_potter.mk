@@ -18,7 +18,7 @@
 $(call inherit-product, device/motorola/potter/full_potter.mk)
 
 # Inherit some common DU stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 #PE Props
 TARGET_BOOT_ANIMATION_RES := 1080
