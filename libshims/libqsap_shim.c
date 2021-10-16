@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/ioctl.h>
 #include <unistd.h>
+#include <string.h>
 #include <cutils/log.h>
 
 // Keep in sync with system/qcom/softap/sdk/qsap_api.c
