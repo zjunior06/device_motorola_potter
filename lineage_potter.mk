@@ -18,7 +18,7 @@
 $(call inherit-product, device/motorola/potter/full_potter.mk)
 
 # Inherit some common DU stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 #PE Props
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -29,7 +29,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := potter
-PRODUCT_NAME := aosp_potter
+PRODUCT_NAME := lineage_potter
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := potter
