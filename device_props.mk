@@ -28,6 +28,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb \
     persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb \
 
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.critical_upgrade=true \
+    ro.lmk.downgrade_pressure=60 \
+    ro.lmk.kill_heaviest_task=false \
+    ro.lmk.log_stats=true \
+    ro.lmk.upgrade_pressure=40 \
+    ro.lmk.use_psi=false
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.speaker=false \
     persist.vendor.audio.fluence.voicecall=true \
