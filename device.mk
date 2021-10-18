@@ -297,6 +297,10 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libandroid_net_32
 
+# Netmgrd
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 # NFC
 PRODUCT_PACKAGES += \
     libnfc \
