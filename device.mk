@@ -250,6 +250,8 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster 4.0 HAL
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service-qti.rc \
+    android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@4.1-service
 
 # Lights
@@ -374,6 +376,12 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libxml2 \
     libcnefeatureconfig
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.secure_element@1.2.vendor
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
