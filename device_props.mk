@@ -39,6 +39,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7
 
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.kernel.ebpf.supported=false
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
