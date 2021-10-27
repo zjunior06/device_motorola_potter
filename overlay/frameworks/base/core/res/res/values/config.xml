@@ -315,7 +315,8 @@
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/system/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+        <item>/system/bin/surfaceflinger</item>
     </string-array>
 
     <!-- Whether device supports double tap to wake -->
