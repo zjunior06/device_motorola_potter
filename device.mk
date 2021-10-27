@@ -110,7 +110,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbt-vendor
+    libbt-vendor \
+    android.hardware.bluetooth@1.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -122,6 +123,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.provider@2.4.vendor \
     libjustshoot_shim \
     libgui_vendor \
     libhidltransport
@@ -147,6 +150,10 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.configstore@1.0-service \
+    android.hardware.graphics.allocator@2.0.vendor \
+    android.hardware.graphics.common@1.1.vendor \
+    android.hardware.graphics.mapper@2.0.vendor \
+    android.hardware.graphics.mapper@3.0.vendor \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libgenlock \
@@ -175,7 +182,11 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.3-service.clearkey \
+    android.hardware.drm@1.0.vendor \
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.3.vendor
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -185,7 +196,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1
+    android.hardware.biometrics.fingerprint@2.1 \
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # FM
 PRODUCT_PACKAGES += \
@@ -196,12 +208,14 @@ PRODUCT_PACKAGES += \
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0.vendor
 
 # GPS / Location
 PRODUCT_PACKAGES += \
     libgpu_mapper_shim \
-    libqsap_shim
+    libqsap_shim \
+    android.hardware.gnss@1.1-impl-qti.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
@@ -264,6 +278,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     android.hardware.media.omx \
+    android.hardware.media.omx@1.0.vendor \
     libextmedia_jni \
     libmm-omxcore \
     libOmxAacEnc \
@@ -292,6 +307,7 @@ PRODUCT_COPY_FILES += \
 # Netutils
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
+    android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0 \
     libandroid_net \
     libandroid_net_32
@@ -428,6 +444,8 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.supplicant@1.1.vendor \
     hostapd \
     libqsap_sdk \
     libcld80211 \
