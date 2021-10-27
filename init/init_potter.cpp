@@ -34,6 +34,7 @@
 #include <android-base/properties.h>
 #include "property_service.h"
 #include "vendor_init.h"
+#include <init/DeviceLibinit.h>
 
 void property_override(char const prop[], char const value[], bool add = true)
 {
@@ -105,4 +106,5 @@ void vendor_load_properties()
     }
 
     check_device();
+    vendor_load_device_properties();
 }

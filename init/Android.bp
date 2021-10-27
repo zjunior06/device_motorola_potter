@@ -14,13 +14,17 @@
 // limitations under the License.
 //
 
-cc_library_static {
+motorola_potter_init_library_static {
     name: "libinit_potter",
     recovery_available: true,
-    srcs: ["init_potter.cpp"],
+    srcs: [
+        "init_potter.cpp",
+        "DeviceLibinit.cpp"
+    ],
     include_dirs: [
         "system/libbase/include",
-        "system/core/init"
+        "system/core/init",
+        "device/moto/potter"
     ],
     shared_libs: [
         "libbase",
